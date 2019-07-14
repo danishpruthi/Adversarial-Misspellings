@@ -76,12 +76,12 @@ Download the source and models from [here](http://www.polishmywriting.com/downlo
 
 Then follow the installation / test instructions [here](https://open.afterthedeadline.com/how-to/get-started/)
 
-This will run the ATD server on localhost at 127.0.0.1:1049. Once, this is done, you can use the `--defense --sc-atd` flag to run the ATD spell checker.
+This will run the ATD server on localhost at 127.0.0.1:1049. Once this is done, you can use the `--defense --sc-atd` flag to run the ATD spell checker.
 
 
 ## Standalone Usage
 
-You can also use (and train) ScRNN as a defense independently for you use case. To directly use a pretrained ScRNN + PassThrough defense, do the following:
+You can also use (and train) ScRNN as a defense independently for your use case. To directly use a pretrained ScRNN + PassThrough defense, do the following:
 
 ```
 $ cd defenses/scRNN/
