@@ -17,9 +17,10 @@ class ScRNNChecker(object):
     def __init__(self, model_name=None, model_name_bg=None, vocab_size=9999,\
         vocab_size_bg=78470, use_background=False, unk_output=False, \
         use_elmo=False,  use_elmo_bg=False, task_name=""):
-        PWD = os.path.dirname(os.path.realpath(__file__))
+        # PWD = os.path.dirname(os.path.realpath(__file__))
+        PWD = '.'
         if model_name is None:
-            MODEL_PATH = PWD + "/model_dumps/scrnn_VOCAB_SIZE=9999_REP_LIST=swap_key_add_drop_REP_PROBS=0.25:0.25:0.25:0.25"
+            MODEL_PATH = PWD+ "/model_dumps/model.pt"
         else:
             MODEL_PATH = PWD + "/" + model_name
 
@@ -65,6 +66,7 @@ class ScRNNChecker(object):
         Xtype = torch.FloatTensor
         ytype = torch.LongTensor
         is_cuda = torch.cuda.is_available()
+        # is_cuda = False
 
         if is_cuda:
             self.model.cuda()
